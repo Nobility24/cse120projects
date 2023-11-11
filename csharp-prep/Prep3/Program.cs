@@ -19,9 +19,11 @@ class Program
         Console.WriteLine("Pick any number between 1 and 100 and see if you guessed right.");
 
         //Using a do-while loop
+        while (guess != magicNumber)
         
         {
             Console.WriteLine("Enter your guess ");
+            guess = int.Parse(Console.ReadLine());
             
 
             if (magicNumber < guess)
