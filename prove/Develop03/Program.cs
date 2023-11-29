@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        string filePath = "scriptures.txt"; // Replace with your file path
+        string filePath = "scriptures.txt"; // Placed scripture file path here
 
         ScriptureLibrary library = new ScriptureLibrary(filePath);
 

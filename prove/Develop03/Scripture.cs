@@ -55,7 +55,7 @@ class ScriptureLibrary
         LoadScripturesFromFile(filePath);
     }
 
-    // Load scriptures from a file
+    // Loading scriptures from a file
     private void LoadScripturesFromFile(string filePath)
     {
         scriptures = new List<Scripture>();
