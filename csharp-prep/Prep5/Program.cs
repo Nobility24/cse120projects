@@ -1,49 +1,32 @@
+
 using System;
 
 class Program
 {
     static void Main(string[] args)
     {
-        DisplayWelcomeMessage();
+        // The list is a list of "Shape" objects. That means any Shape objects
+        //  can be put in there, and also, any object where the class inherits from Shape
+        List<Shape> shapes = new List<Shape>();
 
-        string userName = PromptUserName();
-        int userNumber = PromptUserNumber();
+        Square s1 = new Square("Red", 3);
+        shapes.Add(s1);
 
-        int squaredNumber = SquareNumber(userNumber);
+        Rectangle s2 = new Rectangle("Blue", 4, 5);
+        shapes.Add(s2);
 
-        DisplayResult(userName, squaredNumber);
+        Circle s3 = new Circle("Green", 6);
+        shapes.Add(s3);
+
+        foreach (Shape s in shapes)
+        {
+            // All shapes have a GetColor method from the base class
+            string color = s.GetColor();
+
+            // All shapes have a GetArea method, but the behavior is different for each type of shape
+            double area = s.GetArea();
+
+            Console.WriteLine($"The {color} shape has an area of {area}.");
+        }
     }
-
-    static void DisplayWelcomeMessage()
-    {
-        Console.WriteLine("Welcome to the program!");
-    }
-
-    static string PromptUserName()
-    {
-        Console.Write("Please enter your name: ");
-        string name = Console.ReadLine();
-
-        return name;
-    }
-
-    static int PromptUserNumber()
-    {
-        Console.Write("Please enter your favorite number: ");
-        int number = int.Parse(Console.ReadLine());
-
-        return number;
-    }
-
-    static int SquareNumber(int number)
-    {
-        int square = number * number;
-        return square;
-    }
-
-    static void DisplayResult(string name, int square)
-    {
-        Console.WriteLine($"{name}, the square of your number is {square}");
-    }
-    
 }
