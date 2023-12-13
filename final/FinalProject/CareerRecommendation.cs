@@ -1,9 +1,18 @@
-class CareerRecommendation
+// CareerRecommendation class
+public class CareerRecommendation
 {
-    private List<string> RecommendedCareers = new List<string>();
+    // Attributes
+    public string TalentsCategory { get; set; }
+    public string InterestsCategory { get; set; }
+    public string SubjectsCategory { get; set; }
 
-    public void GenerateRecommendation()
+    // Method
+    public string RecommendCareer()
     {
-        // Implementation for generating career recommendations
+        // Logic to recommend career based on categories
+        // ...
+
+        // For simplicity, returning a placeholder career
+        return "Recommended Career";
     }
 }

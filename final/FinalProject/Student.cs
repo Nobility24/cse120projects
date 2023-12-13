@@ -1,15 +1,30 @@
-class Student : Person
-{
-    private int StudentID;
-    private List<string> CurrentSubjects = new List<string>();
+using System;
+using System.Collections.Generic;
 
-    public void SetStudentID(int id)
+// Base class for Student
+public class Student
+{
+    // Attributes
+    public int StudentId { get; set; }
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public List<string> Talents { get; set; }
+    public List<string> Interests { get; set; }
+    public List<string> Subjects { get; set; }
+
+    // Methods
+    public void AddTalents(List<string> talents)
     {
-        StudentID = id;
+        Talents.AddRange(talents);
     }
 
-    public void AddSubject(string subject)
+    public void AddInterests(List<string> interests)
     {
-        CurrentSubjects.Add(subject);
+        Interests.AddRange(interests);
+    }
+
+    public void AddSubjects(List<string> subjects)
+    {
+        Subjects.AddRange(subjects);
     }
 }

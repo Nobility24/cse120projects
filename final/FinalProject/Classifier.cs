@@ -1,19 +1,68 @@
-class Classifier
+// SubjectClass inherits from Student
+public class SubjectClass : Student
 {
-    protected List<string> Categories = new List<string>();
+    // Attributes specific to SubjectClass
+    public int SubjectId { get; set; }
+    public string SubjectName { get; set; }
+    public string SubjectType { get; set; }
 
-    public void Categorize()
+    // Method
+    public string GetSubjectType()
     {
-        // Implementation for generic categorization
+        return SubjectType;
     }
 }
 
-class TalentClassifier : Classifier
+// TalentClassifier class
+public class TalentClassifier
 {
-    private List<string> Talents = new List<string>();
+    // Attributes
+    public List<string> TalentsList { get; set; }
+    public List<string> Categories { get; set; }
 
-    public void AddTalent(string talent)
+    // Method
+    public string CategorizeTalent(string talent)
     {
-        Talents.Add(talent);
+        // Logic to categorize talent
+        // ...
+
+        // For simplicity, returning a placeholder category
+        return "Category";
+    }
+}
+
+// InterestClassifier class
+public class InterestClassifier
+{
+    // Attributes
+    public List<string> InterestsList { get; set; }
+    public List<string> Categories { get; set; }
+
+    // Method
+    public string CategorizeInterest(string interest)
+    {
+        // Logic to categorize interest
+        // ...
+
+        // For simplicity, returning a placeholder category
+        return "Category";
+    }
+}
+
+// SubjectClassifier class
+public class SubjectClassifier
+{
+    // Attributes
+    public List<string> SubjectsList { get; set; }
+    public List<string> Categories { get; set; }
+
+    // Method
+    public string CategorizeSubject(string subject)
+    {
+        // Logic to categorize subject
+        // ...
+
+        // For simplicity, returning a placeholder category
+        return "Category";
     }
 }
